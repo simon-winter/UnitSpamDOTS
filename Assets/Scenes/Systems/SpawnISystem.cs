@@ -29,10 +29,11 @@ public partial struct SpawnISystem : ISystem
         var jh = new SpawnJob {
             buffer = cmdBuffer,
             deltaTime = deltaTime,
-            // not sure why, but this still generates all jobs with same seed,
-            // for different random positions add Random to each spawnZone component
+            // rndSeed is sadly not random between jobs, as it seems its 1 job with many execute functions,
+            // so all spawnZones have same randomValues within a frame
+            // could move random to SpawnZone, but thats unnecessary for this project
             rndSeed = rndSeed.ValueRW.value.NextUInt() 
-        }.Schedule(state.Dependency);
+        }.ScheduleParallel(state.Dependency);
         jh.Complete();
     }
 }
