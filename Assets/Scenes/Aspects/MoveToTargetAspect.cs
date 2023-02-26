@@ -14,7 +14,9 @@ public readonly partial struct MoveToTargetAspect : IAspect
     private readonly RefRW<MoveTarget> moveTarget;
 
     public void Move(float deltaTime) {
-        float3 dir = math.normalize(moveTarget.ValueRO.value - transform.LocalPosition);
-        transform.LocalPosition += dir * deltaTime * speed.ValueRO.value;
+        if (math.distance(transform.LocalPosition, moveTarget.ValueRO.value) > 0.1) {
+            float3 dir = math.normalize(moveTarget.ValueRO.value - transform.LocalPosition);
+            transform.LocalPosition += dir * deltaTime * speed.ValueRO.value;
+        }      
     }
 }

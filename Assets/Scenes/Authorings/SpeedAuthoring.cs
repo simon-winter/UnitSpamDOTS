@@ -9,7 +9,7 @@ public class SpeedAuthoring : MonoBehaviour
     public float value;
 }
 
-public class MoveBaker : Baker<SpeedAuthoring>
+public class SpeedBaker : Baker<SpeedAuthoring>
 {
     public override void Bake(SpeedAuthoring authoring) {
         AddComponent(new Speed {
