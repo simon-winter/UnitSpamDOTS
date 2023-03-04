@@ -5,6 +5,6 @@ using Unity.Entities;
 
 public struct Speed : IComponentData
 {
-    public float value;
-
+    public float linear;
+    public float angular;
 }

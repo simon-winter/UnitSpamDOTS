@@ -52,18 +52,18 @@ public partial struct SpawnJob : IJobEntity
             spawnZone.ValueRW.elapsedTime -= spawnZone.ValueRW.SpawnTimer;
             var rnd = new Random(rndSeed);
             // calculate random spawn position in spawn Zone
-            var x_max = tf.LocalPosition.x + (scale.Value.c0.x / 2);
-            var x_min = tf.LocalPosition.x - (scale.Value.c0.x / 2);
-            var z_max = tf.LocalPosition.z + (scale.Value.c2.z / 2);
-            var z_min = tf.LocalPosition.z - (scale.Value.c2.z / 2);
-
+            var x_max = tf.WorldPosition.x + (scale.Value.c0.x / 2f);
+            var x_min = tf.WorldPosition.x - (scale.Value.c0.x / 2f);
+            var z_max = tf.WorldPosition.z + (scale.Value.c2.z / 2f);
+            var z_min = tf.WorldPosition.z - (scale.Value.c2.z / 2f);
+            
             var x = rnd.NextFloat(x_min, x_max);
             var z = rnd.NextFloat(z_min, z_max);
-
+          
             var spawnedEntity = buffer.Instantiate(0, spawnZone.ValueRW.UnitPrefab);
-            buffer.SetComponent(1, spawnedEntity, new LocalTransform {
-                Position = new float3(x, 1, z),
-                Scale = 1,
+            buffer.SetComponent(1, spawnedEntity, LocalTransform.FromPosition(x, 0, z));
+            buffer.SetComponent(1, spawnedEntity, new Target {
+               position = spawnZone.ValueRO.SpawnTarget
             });
         }
     }

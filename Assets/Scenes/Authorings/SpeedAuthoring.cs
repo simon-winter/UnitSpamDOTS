@@ -6,14 +6,16 @@ using Unity.Entities;
 
 public class SpeedAuthoring : MonoBehaviour
 {
-    public float value;
+    public float linear;
+    public float angular;
 }
 
 public class SpeedBaker : Baker<SpeedAuthoring>
 {
     public override void Bake(SpeedAuthoring authoring) {
         AddComponent(new Speed {
-            value = authoring.value
+            linear = authoring.linear,
+            angular = authoring.angular
         });
     }
 }

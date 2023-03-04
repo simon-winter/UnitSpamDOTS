@@ -4,8 +4,8 @@ using Unity.Entities;
 using Unity.Mathematics;
 using UnityEngine;
 
-public partial struct MoveTarget : IComponentData
+public partial struct Target : IComponentData
 {
-    public float3 value;
+    public float3 position;
    
 }

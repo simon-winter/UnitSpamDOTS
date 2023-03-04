@@ -28,7 +28,8 @@ public partial struct MoveToTargetJob : IJobEntity
 {
     public float deltaTime;
     [BurstCompile]
-    public void Execute(MoveToTargetAspect moveToTarget) {
-        moveToTarget.Move(deltaTime);
+    public void Execute(MovementAspect ma) {
+        ma.RotateToTarget(deltaTime);
+        ma.MoveToTarget(deltaTime);
     }
 }
