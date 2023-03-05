@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Unity.Entities;
 using Unity.Mathematics;
+using Unity.Transforms;
 
 public class SpawnZoneAuthoring : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class SpawnZoneAuthoring : MonoBehaviour
     public float SpawnTimer;
     public float elapsedTime;
 
-    public Transform SpawnTarget;
+    public GameObject SpawnTarget;
 }
 
 public class SpawnZoneBaker : Baker<SpawnZoneAuthoring>
@@ -22,7 +23,7 @@ public class SpawnZoneBaker : Baker<SpawnZoneAuthoring>
             UnitPrefab = GetEntity(authoring.UnitPrefab),
             SpawnTimer = authoring.SpawnTimer,
             elapsedTime = authoring.elapsedTime,
-            SpawnTarget = authoring.SpawnTarget.position
+            SpawnTarget = GetComponent<Transform>(authoring.SpawnTarget).position
         });
     }
 }

@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 690922574050561145}
   - component: {fileID: 5682195789316759585}
   - component: {fileID: 506047575204159398}
-  - component: {fileID: 8745857856178970077}
+  - component: {fileID: 4906448066691603967}
   m_Layer: 0
-  m_Name: SpawnZone
+  m_Name: spawnZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27,8 +27,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3906186873464653432}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.23, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 0.13, z: 1}
+  m_LocalPosition: {x: -1, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 0.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 410711129546600932}
@@ -84,7 +84,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &8745857856178970077
+--- !u!114 &4906448066691603967
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -100,7 +100,7 @@ MonoBehaviour:
     type: 3}
   SpawnTimer: 1
   elapsedTime: 0
-  SpawnTarget: {fileID: 1764983612476437482}
+  SpawnTarget: {fileID: 4877994815407591693}
 --- !u!1 &3972870662121749861
 GameObject:
   m_ObjectHideFlags: 0
@@ -147,7 +147,7 @@ GameObject:
   - component: {fileID: 258299257872247668}
   - component: {fileID: 3991422832296396659}
   m_Layer: 0
-  m_Name: SpawnTarget
+  m_Name: spawnTarget
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -161,7 +161,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4877994815407591693}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.54, y: 0, z: 0}
+  m_LocalPosition: {x: 0.44, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 0.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

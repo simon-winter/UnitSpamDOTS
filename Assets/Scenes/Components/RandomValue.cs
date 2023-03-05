@@ -6,5 +6,5 @@ using UnityEngine;
 
 public partial struct RandomValue : IComponentData
 {
-    public Unity.Mathematics.Random value;   
+    public Unity.Mathematics.Random Value;   
 }

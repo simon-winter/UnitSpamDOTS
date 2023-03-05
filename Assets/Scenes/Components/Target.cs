@@ -6,6 +6,6 @@ using UnityEngine;
 
 public partial struct Target : IComponentData
 {
-    public float3 position;
+    public float3 Position;
    
 }

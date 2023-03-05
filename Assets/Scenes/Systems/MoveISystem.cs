@@ -15,7 +15,8 @@ public partial struct MoveISystem : ISystem
         //foreach (MoveToTargetAspect moveToTarget in SystemAPI.Query<MoveToTargetAspect>()) {
         //    moveToTarget.Move(SystemAPI.Time.DeltaTime);
         //}
-        float deltaTime = SystemAPI.Time.DeltaTime;        
+        float deltaTime = SystemAPI.Time.DeltaTime;
+
         var jh = new MoveToTargetJob {
             deltaTime = deltaTime
         }.ScheduleParallel(state.Dependency);

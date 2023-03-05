@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class TargetAuthoring : MonoBehaviour
 {
-    public float3 position;
+    public float3 Position;
 
 }
 
@@ -14,7 +14,7 @@ public class TargetBaker : Baker<TargetAuthoring>
 {
     public override void Bake(TargetAuthoring authoring) {
         AddComponent(new Target {
-            position = authoring.position
+            Position = authoring.Position
         });
     }
 }

@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2acb404b3839f314e956435e4a006fdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  seed: 1
+  Seed: 0
 --- !u!4 &1102234687
 Transform:
   m_ObjectHideFlags: 0
@@ -236,17 +236,42 @@ PrefabInstance:
     - target: {fileID: 690922574050561145, guid: 53baeca767d8048479a730a2e4f2118e,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 8.7438
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 690922574050561145, guid: 53baeca767d8048479a730a2e4f2118e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.74
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 690922574050561145, guid: 53baeca767d8048479a730a2e4f2118e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1764983612476437482, guid: 53baeca767d8048479a730a2e4f2118e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 10.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 1764983612476437482, guid: 53baeca767d8048479a730a2e4f2118e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3972870662121749861, guid: 53baeca767d8048479a730a2e4f2118e,
         type: 3}
       propertyPath: m_Name
       value: Spawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 8745857856178970077, guid: 53baeca767d8048479a730a2e4f2118e,
+        type: 3}
+      propertyPath: SpawnTimer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8745857856178970077, guid: 53baeca767d8048479a730a2e4f2118e,
+        type: 3}
+      propertyPath: elapsedTime
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

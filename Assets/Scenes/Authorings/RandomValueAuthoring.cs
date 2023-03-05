@@ -6,14 +6,14 @@ using Unity.Entities;
 
 public class RandomValueAuthoring : MonoBehaviour
 {
-    public uint seed; 
+    public uint Seed; 
 }
 
 public class RandomValueBaker : Baker<RandomValueAuthoring>
 {
     public override void Bake(RandomValueAuthoring authoring) {
         AddComponent(new RandomValue {
-            value = new Unity.Mathematics.Random(authoring.seed)
+            Value = new Unity.Mathematics.Random(authoring.Seed)
         });
     }
 }

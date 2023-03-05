@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4874444342493376586}
   - component: {fileID: 2424976888050430345}
   m_Layer: 0
-  m_Name: Chassis
+  m_Name: chassis
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -117,8 +117,9 @@ GameObject:
   - component: {fileID: 3568261226616456393}
   - component: {fileID: 8620659200253349805}
   - component: {fileID: 5315416791718695637}
+  - component: {fileID: 6786276593188085803}
   m_Layer: 0
-  m_Name: Barrel
+  m_Name: barrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -212,6 +213,25 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!114 &6786276593188085803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 440116619386889259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 609b28135cc08e741bd9c1f6a661d11e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Projectile: {fileID: 6526257557592632824, guid: fe07ecbba2939434fb58f88aa07c378c,
+    type: 3}
+  Range: 1
+  AimSpeed: 1
+  ReloadTime: 2
+  coolDownTimer: 0
+  Damage: 1
 --- !u!1 &2969161556091118764
 GameObject:
   m_ObjectHideFlags: 0
@@ -225,7 +245,7 @@ GameObject:
   - component: {fileID: 8537298317486552305}
   - component: {fileID: 2203198429137769342}
   m_Layer: 0
-  m_Name: Turret
+  m_Name: turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -365,8 +385,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c8de8e415c04bf438f95845a894c348, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  linear: 2
-  angular: 1
+  Linear: 1
+  Angular: 1
 --- !u!114 &764268755141232575
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -379,7 +399,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22b30842a5615914c937f7b2da4c13f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  position:
+  Position:
     x: 0
     y: 0
     z: 0
